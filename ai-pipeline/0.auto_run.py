@@ -43,7 +43,7 @@ with open(csv_file, "r", encoding="utf-8") as f:
         answer = row.get("answer") or row.get("solution")
         cmd = [
             "python",
-            r"D:/Abhinav (Coding)/PersonalProjects/14. Project-Flash/ai-pipeline/1.script-generation.py",
+            "1.script-generation.py",
             "-q", question,
             "-a", answer
         ]
@@ -54,11 +54,11 @@ with open(csv_file, "r", encoding="utf-8") as f:
         except subprocess.CalledProcessError as e:
             print(f"❌ Error while running for row {i}: {e}")
         print("-" * 60)
-        
-        subprocess.run(["python","3.index-tts-sentences.py","-r","wav_file"], check=True)
-        subprocess.run(["python","3.index-tts-sentences.py"], check=True)
-        subprocess.run(["python","3.index-tts-sentences.py"], check=True)
-        subprocess.run(["python","3.index-tts-sentences.py"], check=True)
-        subprocess.run(["python","3.index-tts-sentences.py"], check=True)
+
+        subprocess.run(["python","3.index-tts-sentences.py","-r",wav_file], check=True)
+        subprocess.run(["python","4.audio+img.py"], check=True)
+        subprocess.run(["python","5.subtitle-generator.py"], check=True)
+        subprocess.run(["python","6.srt-adding.py"], check=True)
+        subprocess.run(["python","8.logo.py","-p",png_file], check=True)
         
 

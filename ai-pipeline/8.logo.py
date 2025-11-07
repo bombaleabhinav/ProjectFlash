@@ -1,5 +1,17 @@
 from moviepy.editor import VideoFileClip, ImageClip, CompositeVideoClip
 
+
+parser = argparse.ArgumentParser(description="Pass absolute path to reference audio file")
+parser.add_argument(
+    "-p", "--ref_photo",
+    type=str,
+    required=True,
+    help="Absolute path to reference audio file (e.g., D:/Flash/audio/voice.mp3)"
+)
+args = parser.parse_args()
+
+
+
 def burn_logo(
     input_video: str,
     logo_path: str,
@@ -49,7 +61,7 @@ if __name__ == "__main__":
 
     burn_logo(
         input_video=rf"D:/Flash/All Videos/{folder_path_my}/final_with_subtitles.mp4",
-        logo_path="media/logo.png",
+        logo_path=args.ref_photo,
         output_video=rf"D:/Flash/All Videos/{folder_path_my}/final_with_subtitles_logo.mp4",
         corner="tl",   # <-- top-left corner
         margin=24,
