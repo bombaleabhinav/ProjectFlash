@@ -4,6 +4,27 @@ import os
 import shutil
 import csv
 import time
+import argparse
+
+
+parser = argparse.ArgumentParser(description="Pass absolute path to reference audio file")
+parser.add_argument(
+    "-r", "--ref_audio",
+    type=str,
+    required=True,
+    help="Absolute path to reference audio file (e.g., D:/Flash/audio/voice.mp3)"
+)
+args = parser.parse_args()
+
+# --- Normalize and validate the path ---
+ref_audio_path = os.path.abspath(args.ref_audio)
+
+if not os.path.exists(ref_audio_path):
+    raise FileNotFoundError(f"Audio file not found at: {ref_audio_path}")
+
+# --- Load using Gradio handle_file ---
+reference_audio = handle_file(ref_audio_path) #taking files from uploaded stuff
+# reference_audio = handle_file(r"media/pc_ref_voice_10s.mp3")
 
 # df = pd.read_csv("api_variables.csv") #include / during 
 
@@ -12,7 +33,7 @@ import time
 client = Client("https://4a856f872137e42638.gradio.live/")
 
 # Reference audio
-reference_audio = handle_file(r"media/pc_ref_voice_10s.mp3")
+
 def move_wav_file(source_path, destination_folder):
     """
     Moves a single .wav file from the given source path to the destination folder.
