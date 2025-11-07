@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Files</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Upload CSV, Image, and Video</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+      <label>CSV File:</label>
+      <input type="file" name="csvFile" accept=".csv" required><br>
+
+      <label>Image:</label>
+      <input type="file" name="imageFile" accept="image/*" required><br>
+
+      <label>Video:</label>
+      <input type="file" name="videoFile" accept="video/*" required><br>
+
+      <button type="submit">Upload</button>
+    </form>
+    <p id="status"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
