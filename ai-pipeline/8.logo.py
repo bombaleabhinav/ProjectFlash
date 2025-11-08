@@ -1,4 +1,5 @@
 from moviepy.editor import VideoFileClip, ImageClip, CompositeVideoClip
+import argparse
 
 
 parser = argparse.ArgumentParser(description="Pass absolute path to reference audio file")

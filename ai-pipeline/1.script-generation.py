@@ -35,20 +35,15 @@ folder_path = os.path.join(base_path, folder_name)
 
 try:
     os.makedirs(folder_path, exist_ok=True)
-    print(f"✅ Folder created successfully at: {folder_path}")
+    print(f"Folder created successfully at: {folder_path}")
 except Exception as e:
-    print(f"❌ Error creating folder: {e}")
+    print(f"Error creating folder: {e}")
 
-# ----------------------------
-# CSV File Creation
-# ----------------------------
+
 csv_path = os.path.join(folder_path, "generated_sentences.csv")
 open(csv_path, 'a').close()
 print(f"✅ CSV file created at: {csv_path}")
 
-# ----------------------------
-# Prompt for Gemma
-# ----------------------------
 prompt = f"""
 You are a YouTube explainer video scriptwriter.
 
@@ -69,9 +64,9 @@ Guidelines:
 9. Do not mention that this is a YouTube explainer video script
 """
 
-# ----------------------------
-# Function to Call Ollama Model
-# ----------------------------
+
+# Function to Call Ollama modell
+
 def getresponse():
     response = ollama.chat(model='gemma3:12b', messages=[
         {'role': 'user', 'content': prompt}
