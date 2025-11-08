@@ -1,28 +1,23 @@
-# ⚡ Flash — The Next-Gen Multimodal Content Generator
-> *“From idea to production-ready video — in a flash.”*
+#  Flash — The Next-Gen Multimodal Content Generator
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![AI Powered](https://img.shields.io/badge/AI-Multimodal%20GenAI-orange?logo=openai)](#)
-[![Status](https://img.shields.io/badge/Status-Active-success)](#)
+
 
 ---
 
-### 🧩 Overview
+### Overview
 
 **Flash** is an advanced **multimodal generative AI pipeline** that automates the end-to-end process of video creation.  
-Built as the successor to **[Matrix Mind](#)**, Flash transforms text, voice, and visual inputs into professional, synchronized, and branded educational videos — *autonomously*.
+Flash is a multimodal generative AI system that automatically converts a question-and-answer pair into a fully synchronized, branded educational video — featuring a cloned teacher’s voice and personalized, context-aware visuals.
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🧠 **Multimodal AI Core** — Handles text, image, and audio inputs simultaneously.  
-- 🗣️ **Voice Cloning** — Clone a speaker’s voice from a 10s reference clip using IndexTTS or compatible APIs.  
-- 🎬 **Auto PPT-to-Video Pipeline** — Generates slides, aligns them with narration, and renders HD videos.  
-- 🎨 **Dynamic Design Engine** — Applies brand colors, logo, and layout style automatically.  
-- ⚙️ **Batch Mode** — Supports CSV/QnA file processing for bulk video generation.  
-- 🧰 **Modular Architecture** — Run each stage (script, voice, slides, render) independently or together.
+- **Multimodal AI Core** — Handles text, image, and audio inputs simultaneously.  
+-  **Voice Cloning** — Clone a speaker’s voice from a 10s reference clip using IndexTTS or compatible APIs.   
+-  **Dynamic Design Engine** — Applies brand colors, logo, and layout style automatically.  
+- **Batch Mode** — Supports CSV/QnA file processing for bulk video generation.  
+- **Modular Architecture** — Run each stage (script, voice, slides, render) independently or together.
 
 ---
 
