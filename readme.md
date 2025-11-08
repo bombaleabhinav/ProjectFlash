@@ -21,5 +21,5 @@ Flash is a multimodal generative AI system that automatically converts a questio
 
 ---
 
-## 🧱 System Architecture
-
+## System Architecture
+![alt text](image.png)
