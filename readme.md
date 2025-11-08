@@ -1,6 +1,6 @@
 #  Flash — The Next-Gen Multimodal Content Generator
 
-
+This project was created by **Team CamelCase**, including: [Anannya](https://github.com/anannya-wakalkar), [Gauri](https://github.com/Gauri-Gaikwad), and [Abhinav](https://github.com/bombaleabhinav) for the ** X-Fair Hackathon**.
 
 ---
 
@@ -22,4 +22,4 @@ Flash is a multimodal generative AI system that automatically converts a questio
 ---
 
 ## System Architecture
-![alt text](image.png)
+![alt text](ai-pipeline\media\image-1.png)
