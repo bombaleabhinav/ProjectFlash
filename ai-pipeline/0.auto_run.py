@@ -2,9 +2,17 @@ import os
 import csv
 import subprocess
 
+csv_file = "config.csv"
 # ======= Step 1: Manually set your folder path here =======
-folder_path = r"D:/Flash"   # 👈 change this to your folder
+with open(csv_file, newline='', encoding='utf-8') as f:
+    reader = csv.reader(f)
+    rows = list(reader)
 
+folder_path = rows[1][0] 
+os.makedirs(folder_path, exist_ok=True) #Base folder
+  # 👈 change this to your folder
+folder_path =folder_path+"/input"
+os.makedirs(folder_path, exist_ok=True)
 # ======= Step 2: Validate folder =======
 if not os.path.isdir(folder_path):
     print(f"❌ Error: '{folder_path}' is not a valid directory.")
@@ -45,7 +53,7 @@ with open(csv_file, "r", encoding="utf-8") as f:
             "python",
             "1.script-generation.py",
             "-q", question,
-            "-a", answer
+            "-s", answer
         ]
 
         # ======= Step 5: Run the script =======
@@ -55,7 +63,7 @@ with open(csv_file, "r", encoding="utf-8") as f:
             print(f"❌ Error while running for row {i}: {e}")
         print("-" * 60)
 
-        subprocess.run(["python","3.index-tts-sentences.py","-r",wav_file], check=True)
+        subprocess.run(["python","3.index-tts-sentences.py","-r",wav_file,"-g",rows[1][1]], check=True)
         subprocess.run(["python","4.audio+img.py"], check=True)
         subprocess.run(["python","5.subtitle-generator.py"], check=True)
         subprocess.run(["python","6.srt-adding.py"], check=True)

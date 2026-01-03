@@ -6,16 +6,32 @@ import csv
 import time
 import argparse
 
+parser = argparse.ArgumentParser(description="Pass absolute path to reference audio file and Gradio endpoint")
 
-parser = argparse.ArgumentParser(description="Pass absolute path to reference audio file")
 parser.add_argument(
     "-r", "--ref_audio",
     type=str,
     required=True,
     help="Absolute path to reference audio file (e.g., D:/Flash/audio/voice.mp3)"
 )
+
+parser.add_argument(
+    "-g", "--gradio-endpoint",
+    dest="gradio_endpoint",
+    type=str,
+    required=True,
+    help="Gradio API base URL"
+)
+
 args = parser.parse_args()
 
+# Use them
+gradio_url = args.gradio_endpoint
+
+client = Client(gradio_url)
+
+print(f"Reference audio: {ref_audio_path}")
+print(f"Connected to: {gradio_url}")
 # --- Normalize and validate the path ---
 ref_audio_path = os.path.abspath(args.ref_audio)
 
@@ -25,14 +41,19 @@ if not os.path.exists(ref_audio_path):
 # --- Load using Gradio handle_file ---
 reference_audio = handle_file(ref_audio_path) #taking files from uploaded stuff
 # reference_audio = handle_file(r"media/pc_ref_voice_10s.mp3")
-
-# df = pd.read_csv("api_variables.csv") #include / during 
-
 # Connect to local IndexTTS WebUI
 # client = Client(df["tts-url"][0])
-client = Client("https://4a856f872137e42638.gradio.live/")
-
+client = gradio_url
 # Reference audio
+
+
+csv_file = "config.csv"
+# ======= Step 1: Manually set your folder path here =======
+with open(csv_file, newline='', encoding='utf-8') as f:
+    reader = csv.reader(f)
+    rows = list(reader)
+
+folder_path = rows[1][0] 
 
 def move_wav_file(source_path, destination_folder):
     """
@@ -101,7 +122,7 @@ with open(txt_folder, "r") as f:
 
 
 #CSV file cells to audio
-csv_file = r"D:/Flash/All Videos"+f"\{folder_path_my}\generated_sentences.csv"
+csv_file = folder_path+f"\{folder_path_my}\generated_sentences.csv"
 print(csv_file)
 # Load the CSV into a DataFrame
 df = pd.read_csv(csv_file)
@@ -112,7 +133,7 @@ txt_folder  = "current_folder.txt"
 with open(txt_folder, "r") as f:
         folder_path_my = f.read().strip()
 
-dst= r"D:/Flash/All Videos"+f"\{folder_path_my}/audio_files" 
+dst= folder_path+f"\{folder_path_my}/audio_files" 
 os.makedirs(dst, exist_ok=True)
 counter = 1
 with open(csv_file, 'r', newline='', encoding='utf-8') as csvfile:
