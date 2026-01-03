@@ -50,4 +50,22 @@ Flash is a multimodal generative AI system that automatically converts a questio
 - **IndexTTS** – Voice cloning and text-to-speech  
 - **Wav2Lip** – Lip-sync generation   
 
+---
+
+## Impact & Benefits
+
+- **Instant Video Generation at Scale**  
+  Teachers and educators spend hours creating video content — our AI generates high-quality videos in **minutes**.
+
+- **Automated Video Creation**  
+  Our multimodal GenAI system converts simple **question–answer pairs** into **sleek, branded explainer videos** automatically.
+
+- **Faster, Smarter Education Delivery**  
+  Designed to revolutionize how **coaching institutes and EdTech platforms** deliver educational content at scale.
+
+- **Q&A to Video in Minutes**  
+  Turn any question and answer into a **ready-to-use explainer video** with zero manual effort.
+
+- **No Editing. No Recording. No Hassle.**  
+  Focus on teaching — the AI handles everything else.
 
