@@ -36,18 +36,6 @@ Flash is a multimodal generative AI system that automatically converts a questio
 
 ---
 
-### Backend & Frameworks
-- **MERN Stack**
-  - React.js
-  - Node.js
-
----
-
-### Programming Language
-- **Python** – Core pipeline logic, automation, and AI orchestration
-
----
-
 ### Python Libraries & Tools
 - **MoviePy** – Video creation and editing  
 - **OpenCV** – Image and video processing  
@@ -62,9 +50,4 @@ Flash is a multimodal generative AI system that automatically converts a questio
 - **IndexTTS** – Voice cloning and text-to-speech  
 - **Wav2Lip** – Lip-sync generation   
 
----
-
-### APIs & Services
-- **Index TTS API**
-- **SwarmUI FastAPI**
 
