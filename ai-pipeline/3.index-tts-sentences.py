@@ -6,7 +6,7 @@ import csv
 import time
 import argparse
 
-parser = argparse.ArgumentParser(description="Pass absolute path to reference audio file and Gradio endpoint")
+parser = argparse.ArgumentParser(description="Add reference audio and endpoint")
 
 parser.add_argument(
     "-r", "--ref_audio",
