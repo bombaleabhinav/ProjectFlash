@@ -23,3 +23,54 @@ Flash is a multimodal generative AI system that automatically converts a questio
 
 ## System Architecture
 ![alt text](ai-pipeline/media/image-1.png)
+
+--- 
+
+## Tech Stack 
+
+### Frontend
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **React.js**
+
+---
+
+### Backend & Frameworks
+- **MERN Stack**
+  - MongoDB
+  - Express.js
+  - React.js
+  - Node.js
+- **FastAPI** – Backend API layer
+
+---
+
+### Programming Language
+- **Python** – Core pipeline logic, automation, and AI orchestration
+
+---
+
+### Python Libraries & Tools
+- **python-pptx** – Automated presentation generation  
+- **MoviePy** – Video creation and editing  
+- **OpenCV** – Image and video processing  
+- **FFmpeg** – Media encoding and processing  
+- **Pydub** – Audio manipulation  
+- **Pandas** – Data handling and preprocessing  
+- **Webview** – Lightweight desktop/web view integration  
+
+---
+
+### AI / ML Models
+- **Ollama Gemma3** – Script and content generation  
+- **IndexTTS** – Voice cloning and text-to-speech  
+- **Wav2Lip** – Lip-sync generation  
+- **SDXL (Stable Diffusion XL)** – Image generation  
+
+---
+
+### APIs & Services
+- **Index TTS API**
+- **SwarmUI FastAPI**
+
