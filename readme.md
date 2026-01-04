@@ -11,6 +11,10 @@ Flash is a multimodal generative AI system that automatically converts a questio
 
 ---
 
+![alt text](ai-pipeline/media/site_main_page.png)
+
+---
+
 ## Features
 
 - **Multimodal AI Core** — Handles text, image, and audio inputs simultaneously.  
