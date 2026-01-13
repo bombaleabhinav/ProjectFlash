@@ -1,9 +1,13 @@
 import React from 'react';
 import { Zap, User } from 'lucide-react';
 
-export function Header() {
+interface HeaderProps {
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
+}
+
+export function Header({ activeTab, setActiveTab }: HeaderProps) {
   const tabs = ['Workspace', 'Projects'];
-  const [activeTab, setActiveTab] = React.useState('Workspace');
 
   return (
     <header className="h-16 border-b border-zinc-800/50 bg-[#0a0a0a]/95 backdrop-blur-sm flex items-center justify-between px-8 sticky top-0 z-50">
@@ -35,13 +39,8 @@ export function Header() {
         ))}
       </nav>
 
-      {/* Right Side - Credits & Profile */}
-      <div className="flex items-center gap-4 min-w-[160px] justify-end">
-        <div className="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-zinc-900/80 border border-zinc-800/50 hover:border-zinc-700/50 transition-colors cursor-pointer group">
-          <div className="w-2 h-2 rounded-full bg-amber-500 group-hover:shadow-sm group-hover:shadow-amber-500/50 transition-shadow"></div>
-          <span className="text-sm font-medium text-zinc-200 group-hover:text-white transition-colors">1,250</span>
-        </div>
-        
+      {/* Right Side - Profile */}
+      <div className="flex items-center justify-end min-w-[160px]">
         <button className="w-9 h-9 rounded-full bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center cursor-pointer hover:shadow-lg hover:shadow-amber-500/30 transition-all hover:scale-105 active:scale-95">
           <User className="w-4.5 h-4.5 text-black" />
         </button>

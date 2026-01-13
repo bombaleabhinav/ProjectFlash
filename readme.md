@@ -4,6 +4,10 @@ This project was created by Team **CamelCase**, including: [Anannya](https://git
 
 ---
 
+![alt text](ai-pipeline/media/site_main_page.png)
+
+---
+
 ### Overview
 
 **Flash** is an advanced **multimodal generative AI pipeline** that automates the end-to-end process of video creation.  
