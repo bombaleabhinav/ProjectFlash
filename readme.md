@@ -14,6 +14,11 @@ This project was created by Team **CamelCase**, including: [Anannya](https://git
 Flash is a multimodal generative AI system that automatically converts a question-and-answer pair into a fully synchronized, branded educational video — featuring a cloned teacher’s voice and personalized, context-aware visuals.
 
 ---
+### UI Preview
+
+![alt text](ai-pipeline/media/site_main_page.png)
+
+---
 
 ## Features
 
