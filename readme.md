@@ -4,8 +4,6 @@ This project was created by Team **CamelCase**, including: [Anannya](https://git
 
 ---
 
-![alt text](ai-pipeline/media/site_main_page.png)
-
 ---
 
 ### Overview
