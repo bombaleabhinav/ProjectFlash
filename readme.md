@@ -2,7 +2,6 @@
 
 This project was created by Team **CamelCase**, including: [Anannya](https://github.com/anannya-wakalkar), [Gauri](https://github.com/Gauri-Gaikwad), and [Abhinav](https://github.com/bombaleabhinav) for the **X-Fair Hackathon**.
 
----
 
 ---
 
